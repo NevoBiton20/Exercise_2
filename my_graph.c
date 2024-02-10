@@ -9,7 +9,7 @@ int main()
     char func='A'; //func (Can be A,B,C,D,EOF)
     do{
         
-        scnaf("%c",&func);
+        scanf("%c",&func);
 
         switch (func)
         {
