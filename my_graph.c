@@ -27,7 +27,7 @@ int main()
                 scanf("%d",&j);
                 if(isRoute(i,j,mat)==TRUE)
                 {
-                    print("%s","True");
+                    printf("%s","True");
                 }
                 else
                 {
@@ -44,7 +44,7 @@ int main()
                 scanf("%d",&j);
                 if(isRoute(i,j,mat)==FALSE)
                 {
-                    print("%d",-1);
+                    printf("%d",-1);
                 }
                 else{
                    printf("%d",shortestPath(i,j,mat));
