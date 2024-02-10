@@ -27,11 +27,11 @@ int main()
                 scanf("%d",&j);
                 if(isRoute(i,j,mat)==TRUE)
                 {
-                    printf("%s","True");
+                    printf("%s\n","True");
                 }
                 else
                 {
-                    printf("%s","False");
+                    printf("%s\n","False");
                     
                 }
             }
@@ -40,14 +40,14 @@ int main()
         case 'C'://shortest path
                 int i=0;
                 int j=0;
-                scanf("%d",&i);
-                scanf("%d",&j);
+                scanf("%d\n",&i);
+                scanf("%d\n",&j);
                 if(isRoute(i,j,mat)==FALSE)
                 {
-                    printf("%d",-1);
+                    printf("%d\n",-1);
                 }
                 else{
-                   printf("%d",shortestPath(i,j,mat));
+                   printf("%d\n",shortestPath(i,j,mat));
                 }
             break;
         }
