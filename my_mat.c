@@ -25,11 +25,6 @@ int isRoute(int i,int j,int mat[10][10])//maybe change func type to double
 
 void firstInit(int mat[10][10])
 {
-    for(int i=0;i<10;i++)//Puts zeros in the main diagonal
-    {
-        mat[i][i]=0;
-    }
-
     for(int k=0;k<10;k++) //Puts double max value (instead of infinity) in all vertices that don't have one connecting edge
     {
         for(int j=0;j<10;j++)
