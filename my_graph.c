@@ -6,19 +6,19 @@ int mat[10][10];
 int main()
 {
     int hasAssignedValues=0; //making sure the user assigns values to the matrix once to use funcs B and C
-    char func='A'; //func (Can be A,B,C,D,EOF)
+    char func="A"; //func (Can be A,B,C,D,EOF)
     do{
         
-        scanf("%c",&func);
+        scanf("%s",&func);
 
         switch (func)
         {
-        case 'A'://assign values
+        case "A"://assign values
             assignValue(mat);
             hasAssignedValues=1;
             break;
 
-        case 'B'://is route
+        case "B"://is route
             if(hasAssignedValues==1)
             {
                 int i=0;
@@ -37,7 +37,7 @@ int main()
             }
             break;
 
-        case 'C'://shortest path
+        case "C"://shortest path
                 int i=0;
                 int j=0;
                 scanf("%d\n",&i);
@@ -52,7 +52,7 @@ int main()
             break;
         }
     }
-    while(func !='D');
+    while(func !="D" || func !="EOF);
 
     return 0;
 }
