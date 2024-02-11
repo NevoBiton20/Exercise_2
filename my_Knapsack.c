@@ -70,33 +70,12 @@ int main()
 
     for(int i=0; i<ITEMS ;i++)
     {
+        printf("enter letter\n");
         scanf("%c",&item);
-        if(item=='a')
-        {
-            scanf("%d",&values[0]);
-            scanf("%d",&weights[0]);
-        }
-        else if(item=='b')
-        {
-            scanf("%d",&values[1]);
-            scanf("%d",&weights[1]);
-        }
-        else if(item=='c')
-        {
-            scanf("%d",&values[2]);
-            scanf("%d",&weights[2]);
-        }
-        else if(item=='d')
-        {
-            scanf("%d",&values[3]);
-            scanf("%d",&weights[3]);
-        }
-        else if(item=='e')
-        {
-            scanf("%d",&values[4]);
-            scanf("%d",&weights[4]);
-        }
+        scanf("%d",&values[item-97]);
+        scanf("%d",&weights[item-97]);
     }
+    
     for(int i=0;i<5;i++)
     {
         printf("%d is weigth: %d and value: %d\n",i, weights[i],values[i]);
