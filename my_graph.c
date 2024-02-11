@@ -6,7 +6,7 @@ int mat[10][10];
 int main()
 {
     int hasAssignedValues=0; //making sure the user assigns values to the matrix once to use funcs B and C
-    char func="A"; //func (Can be A,B,C,D,EOF)
+    char func[]="A"; //func (Can be A,B,C,D,EOF)
     do{
         
         scanf("%s",&func);
