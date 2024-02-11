@@ -71,30 +71,30 @@ int main()
     for(int i=0; i<ITEMS ;i++)
     {
         scanf("%c",&item);
-
-        switch (item)
+        if(item=='a')
         {
-            case 'a':
-                scanf("%d",&values[0]);
-                scanf("%d",&weights[0]);
-                break;
-            case 'b':
-                scanf("%d",&values[1]);
-                scanf("%d",&weights[1]);
-                
-                break;
-            case 'c':
-                scanf("%d",&values[2]);
-                scanf("%d",&weights[2]);
-                break;
-            case 'd':
-                scanf("%d",&values[3]);
-                scanf("%d",&weights[3]);
-                break;
-            case 'e':
-                scanf("%d",&values[4]);
-                scanf("%d",&weights[4]);
-                break;
+            scanf("%d",&values[0]);
+            scanf("%d",&weights[0]);
+        }
+        else if(item=='b')
+        {
+            scanf("%d",&values[1]);
+            scanf("%d",&weights[1]);
+        }
+        else if(item=='c')
+        {
+            scanf("%d",&values[2]);
+            scanf("%d",&weights[2]);
+        }
+        else if(item=='d')
+        {
+            scanf("%d",&values[3]);
+            scanf("%d",&weights[3]);
+        }
+        else if(item=='e')
+        {
+            scanf("%d",&values[4]);
+            scanf("%d",&weights[4]);
         }
     }
     for(int i=0;i<5;i++)
