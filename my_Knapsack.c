@@ -13,6 +13,7 @@ int max(int num,int num2)
 }
 
 
+
 int knapSack(int weigths[], int values[], int selected_bool[])
 {
     int table[ITEMS +1][Mweigth+1];
