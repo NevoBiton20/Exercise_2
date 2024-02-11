@@ -15,15 +15,6 @@ void assignValue(int mat[10][10])
     }
 }
 
-int isRoute(int i,int j,int mat[10][10])//maybe change func type to double
-{
-    if(mat[i][j]==FALSE)
-    {
-        return FALSE;
-    }
-    return TRUE;
-}
-
 void firstInit(int mat[10][10])
 {
     for(int k=0;k<10;k++) //Puts double max value (instead of infinity) in all vertices that don't have one connecting edge
@@ -55,6 +46,17 @@ void shortestPathMatrix(int mat[10][10])
         }
     }
 }
+
+int isRoute(int i,int j,int mat[10][10])//maybe change func type to double
+{
+    shortestPathMatrix(mat[10][10]);
+    if(mat[i][j]==FALSE || mat[i][j]==__INT_MAX__)
+    {
+        return FALSE;
+    }
+    return TRUE;
+}
+
 int shortestPath(int i, int j, int mat[10][10])//maybe change func type to double
 {//returns the shortest path between the vertices i and j
     shortestPathMatrix(mat);
