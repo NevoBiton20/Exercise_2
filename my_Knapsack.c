@@ -75,11 +75,6 @@ int main()
         scanf(" %d",&values[item-97]);
         scanf(" %d",&weights[item-97]);
     }
-    
-    for(int i=0;i<5;i++)
-    {
-        printf("%d is weigth: %d and value: %d\n",i, weights[i],values[i]);
-    }
     int selected[ITEMS];
     int maxProfit = knapSack(weights,values,selected);
     printf("Maximum profit: %d\n",maxProfit);
