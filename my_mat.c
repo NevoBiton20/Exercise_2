@@ -47,7 +47,7 @@ void shortestPathMatrix(int mat[10][10])
         {
             for(int j=0;j<10;j++)
             {
-                if(mat[i][k]!=__INT_MAX__ && mat[k][j]!=__INT_MAX__ && mat[i][j] > mat[i][k] + mat[k][j]])
+                if(mat[i][k]!=__INT_MAX__ && mat[k][j]!=__INT_MAX__ && mat[i][j] > mat[i][k] + mat[k][j])
                 {
                     mat[i][j] = mat[i][k] + mat[k][j];
                 }
