@@ -63,14 +63,13 @@ int knapSack(int weigths[], int values[], int selected_bool[])
 
 int main()
 {
-    int values[ITEMS];
-    int weights[ITEMS];
+    int values[ITEMS]={0};
+    int weights[ITEMS]={0};
 
     char item =0;
 
     for(int i=0; i<ITEMS ;i++)
     {
-        printf("enter letter\n");
         scanf("%c",&item);
         scanf("%d",&values[item-97]);
         scanf("%d",&weights[item-97]);
