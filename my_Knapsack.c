@@ -71,9 +71,9 @@ int main()
 
     for(int i=0; i<ITEMS ;i++)
     {
-        scanf("%c",&item);
-        scanf("%d",&values[item-97]);
-        scanf("%d",&weights[item-97]);
+        scanf(" %c",&item);
+        scanf(" %d",&values[item-97]);
+        scanf(" %d",&weights[item-97]);
     }
     
     for(int i=0;i<5;i++)
