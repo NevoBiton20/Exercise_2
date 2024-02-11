@@ -13,14 +13,11 @@ int max(int num,int num2)
 }
 
 
-
-
-
 int knapSack(int weigths[], int values[], int selected_bool[])
-{
+{//function that gets weights and values of 5 items and computes the most profitable combination of items and sends a boolean array that marks which items were chosen
     int table[ITEMS +1][Mweigth+1];
 
-    for(int j=0;j<=ITEMS;j++)
+    for(int j=0;j<=ITEMS;j++)//table creation
     {
         for(int w=0;w<=Mweigth;w++)
         {
