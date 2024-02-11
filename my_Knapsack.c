@@ -78,7 +78,7 @@ int main()
     int selected[ITEMS];
     int maxProfit = knapSack(weights,values,selected);
     printf("Maximum profit: %d\n",maxProfit);
-    printf("Items that give the maximum profit:");
+    printf("Selected items:");
     for(int i=0;i<ITEMS;i++)
     {
         if(selected[i]==TRUE)
