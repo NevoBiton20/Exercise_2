@@ -49,7 +49,7 @@ void shortestPathMatrix(int mat[10][10])
 
 int isRoute(int i,int j,int mat[10][10])//maybe change func type to double
 {
-    shortestPathMatrix(mat[10][10]);
+    shortestPathMatrix(mat);
     if(mat[i][j]==FALSE || mat[i][j]==__INT_MAX__)
     {
         return FALSE;
