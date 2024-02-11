@@ -47,7 +47,15 @@ int knapSack(int weigths[], int values[], int selected_bool[])
         }
         j--;
     }
-    return table[ITEMS][Mweigth];
+    int maxValue=0;
+    for(int i=0;i<ITEMS;i++)
+    {
+        if(selected_bool[i]==TRUE)
+        {
+            maxValue += values[i];
+        }
+    }
+    return maxValue;
 }
 
 
@@ -95,7 +103,7 @@ int main()
     {
         if(selected[i]==TRUE)
         {
-            printf(" %c",i+97);
+            printf(" %c",(i+97));
         }
     }
     return 0;
