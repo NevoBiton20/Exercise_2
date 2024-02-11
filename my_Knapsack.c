@@ -95,7 +95,7 @@ int main()
     {
         if(selected[i]==TRUE)
         {
-            printf(" %c",selected[i]);
+            printf(" %c",i+97);
         }
     }
     return 0;
