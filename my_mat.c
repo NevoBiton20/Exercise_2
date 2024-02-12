@@ -1,8 +1,6 @@
 #include "my_mat.h"
 #include <stdio.h>
 
-static int hasBuilded=FALSE;
-
 
 
 void assignValue(int mat[10][10])
@@ -32,7 +30,6 @@ void firstInit(int mat[10][10])
 
 void shortestPathMatrix(int mat[10][10])
 {//shortestPathMatrix change the weight matrix to matrix that for every place [i][j] holds the shortest path between the vertices i and j
-    hasBuilded=TRUE;
     firstInit(mat);
     for(int k=0;k<10;k++)
     {
@@ -51,10 +48,7 @@ void shortestPathMatrix(int mat[10][10])
 
 int isRoute(int i,int j,int mat[10][10])//maybe change func type to double
 {
-    if(hasBuilded==FALSE)
-    {
-        shortestPathMatrix(mat);
-    }
+    shortestPathMatrix(mat);
     if(mat[i][j]==FALSE || mat[i][j]==__INT_MAX__)
     {
         return FALSE;
@@ -64,9 +58,6 @@ int isRoute(int i,int j,int mat[10][10])//maybe change func type to double
 
 int shortestPath(int i, int j, int mat[10][10])//maybe change func type to double
 {//returns the shortest path between the vertices i and j
-    if(hasBuilded==FALSE)
-    {
-        shortestPathMatrix(mat);
-    }
+    shortestPathMatrix(mat);
     return mat[i][j];
 }
