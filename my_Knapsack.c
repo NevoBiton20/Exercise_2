@@ -14,10 +14,10 @@ int max(int num,int num2)
 
 
 int knapSack(int weigths[], int values[], int selected_bool[])
-{//function that gets weights and values of 5 items and computes the most profitable combination of items and sends a boolean array that marks which items were chosen
+{
     int table[ITEMS +1][Mweigth+1];
 
-    for(int j=0;j<=ITEMS;j++)//table creation
+    for(int j=0;j<=ITEMS;j++)
     {
         for(int w=0;w<=Mweigth;w++)
         {
@@ -61,26 +61,26 @@ int knapSack(int weigths[], int values[], int selected_bool[])
 
 int main()
 {
-    int values[ITEMS]={0};
-    int weights[ITEMS]={0};
+    int values[ITEMS] = {0};
+    int weights[ITEMS] = {0};
 
-    char item =0;
+    char item[ITEMS][20]={0};
 
-    for(int i=0; i<ITEMS ;i++)
+    for(int i=0; i<ITEMS;i++)
     {
-        scanf(" %c",&item);
-        scanf(" %d",&values[item-97]);
-        scanf(" %d",&weights[item-97]);
+        scanf(" %20s",item[i]);
+        scanf(" %d",&values[i]);
+        scanf(" %d",&weights[i]);
     }
     int selected[ITEMS];
     int maxProfit = knapSack(weights,values,selected);
     printf("Maximum profit: %d\n",maxProfit);
-    printf("Selected items:");
+    printf("Items that give the maximum profit:");
     for(int i=0;i<ITEMS;i++)
     {
         if(selected[i]==TRUE)
         {
-            printf(" %c",(i+97));
+            printf(" %s",item[i]);
         }
     }
     return 0;
