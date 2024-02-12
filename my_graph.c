@@ -9,7 +9,7 @@ int main()
     char func='A'; //func (Can be A,B,C,D,EOF)
     do{
         
-        scanf("%c",&func);
+        scanf("%s",&func);
 
         switch (func)
         {
@@ -52,7 +52,7 @@ int main()
             break;
         }
     }
-    while(func !='D');
+    while(func !='D' || func !=EOF);
 
     return 0;
 }
