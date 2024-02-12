@@ -52,7 +52,7 @@ int main()
             break;
         }
     }
-    while(func !='D' || func !=EOF);
+    while(func !='D');
 
     return 0;
 }
